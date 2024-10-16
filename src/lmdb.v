@@ -1,4 +1,4 @@
-module lmdb
+module vlmdb
 
 #flag -I @VMODROOT/thirdparty/
 #flag @VMODROOT/thirdparty/mdb.o
