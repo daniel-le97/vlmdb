@@ -3,10 +3,10 @@
 
 docs:
 	rm -rf ./docs
-	v doc ./src -comments -f markdown -o ./docs/markdown
-	v doc ./src -f html -o ./docs/html
-	mv ./docs/html/lmdb.html ./docs/html/index.html
-	python3 -m http.server --directory ./docs/html
+	v doc ./src -comments -f markdown -o docs.md
+	v doc ./src -f html -o ./docs/
+	mv ./docs/vlmdb.html ./docs/index.html
+	python3 -m http.server --directory ./docs
 
 fmt:
 	v fmt -w .
