@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>lmdb | vdoc</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+		<link rel="manifest" href="site.webmanifest" />
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+
+	<body>
+		<div><a id="skip-to-content-link" href="#main-content">Skip to content</a></div>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module">lmdb</div>
+							<div class="toggle-version-container">
+								<span> da3112e</span>
+								<div
+									id="dark-mode-toggle"
+									role="switch"
+									aria-checked="false"
+									aria-label="Toggle dark mode"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+
+								</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<div id="search">
+							<input type="text" placeholder="Search... (beta)" autocomplete="off" />
+						</div>
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><a href="#mdb_cmp">fn mdb_cmp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_cursor_close">fn mdb_cursor_close</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_cursor_count">fn mdb_cursor_count</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_cursor_dbi">fn mdb_cursor_dbi</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_cursor_del">fn mdb_cursor_del</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_cursor_get">fn mdb_cursor_get</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_cursor_open">fn mdb_cursor_open</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_cursor_put">fn mdb_cursor_put</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_cursor_renew">fn mdb_cursor_renew</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_cursor_txn">fn mdb_cursor_txn</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_dbi_close">fn mdb_dbi_close</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_dbi_flags">fn mdb_dbi_flags</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_dbi_open">fn mdb_dbi_open</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_dcmp">fn mdb_dcmp</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_del">fn mdb_del</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_drop">fn mdb_drop</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_close">fn mdb_env_close</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_copy">fn mdb_env_copy</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_copy2">fn mdb_env_copy2</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_copyfd">fn mdb_env_copyfd</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_copyfd2">fn mdb_env_copyfd2</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_create">fn mdb_env_create</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_get_fd">fn mdb_env_get_fd</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_get_flags">fn mdb_env_get_flags</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_get_maxkeysize">fn mdb_env_get_maxkeysize</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_get_maxreaders">fn mdb_env_get_maxreaders</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_get_path">fn mdb_env_get_path</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_get_userctx">fn mdb_env_get_userctx</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_info">fn mdb_env_info</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_open">fn mdb_env_open</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_set_assert">fn mdb_env_set_assert</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_set_flags">fn mdb_env_set_flags</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_set_mapsize">fn mdb_env_set_mapsize</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_set_maxdbs">fn mdb_env_set_maxdbs</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_set_maxreaders">fn mdb_env_set_maxreaders</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_set_userctx">fn mdb_env_set_userctx</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_stat">fn mdb_env_stat</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_env_sync">fn mdb_env_sync</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_get">fn mdb_get</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_put">fn mdb_put</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_reader_check">fn mdb_reader_check</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_reader_list">fn mdb_reader_list</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_set_compare">fn mdb_set_compare</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_set_dupsort">fn mdb_set_dupsort</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_set_relctx">fn mdb_set_relctx</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_set_relfunc">fn mdb_set_relfunc</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_stat">fn mdb_stat</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_strerror">fn mdb_strerror</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_txn_abort">fn mdb_txn_abort</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_txn_begin">fn mdb_txn_begin</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_txn_commit">fn mdb_txn_commit</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_txn_env">fn mdb_txn_env</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_txn_id">fn mdb_txn_id</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_txn_renew">fn mdb_txn_renew</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_txn_reset">fn mdb_txn_reset</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#mdb_version">fn mdb_version</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#MDB_cmp_func">type MDB_cmp_func</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#MDB_msg_func">type MDB_msg_func</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#MDB_rel_func">type MDB_rel_func</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Mdb_cursor">type Mdb_cursor</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Mdb_dbi">type Mdb_dbi</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Mdb_env">type Mdb_env</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Mdb_envinfo">type Mdb_envinfo</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Mdb_filehandle_t">type Mdb_filehandle_t</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Mdb_mode_t">type Mdb_mode_t</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Mdb_size_t">type Mdb_size_t</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Mdb_stat">type Mdb_stat</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Mdb_txn">type Mdb_txn</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Mdb_val">type Mdb_val</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Mdb_cursor_op">enum Mdb_cursor_op</a>        <ul>
+</ul>
+</li>
+
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview" tabindex="-1" id="main-content">
+				<div class="doc-container">
+					<div class="doc-content">
+								<section id="lmdb" class="doc-node">
+			<div class="title"><h1> lmdb</h1></div>
+
+
+</section>
+
+		<section id="mdb_cmp" class="doc-node">
+			<div class="title"><h2>fn mdb_cmp <a href="#mdb_cmp">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_cmp</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> const_a <span class="token operator">&</span>Mdb_val<span class="token punctuation">,</span> const_b <span class="token operator">&</span>Mdb_val<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Compare two data items according to a particular database. This returns a comparison as if the two data items were keys in the specified database. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[in] a The first item to compare @param[in] b The second item to compare @return &lt; 0 if a &lt; b, 0 if a == b, &gt; 0 if a &gt; b</p>
+
+</section>
+
+		<section id="mdb_cursor_close" class="doc-node">
+			<div class="title"><h2>fn mdb_cursor_close <a href="#mdb_cursor_close">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_cursor_close</span><span class="token punctuation">(</span>cursor <span class="token operator">&</span>Mdb_cursor<span class="token punctuation">)</span></code></pre>
+<p>Close a cursor handle. The cursor handle will be freed and must not be used again after this call. Its transaction must still be live if it is a write-transaction. @param[in] cursor A cursor handle returned by #mdb_cursor_open()</p>
+
+</section>
+
+		<section id="mdb_cursor_count" class="doc-node">
+			<div class="title"><h2>fn mdb_cursor_count <a href="#mdb_cursor_count">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_cursor_count</span><span class="token punctuation">(</span>cursor <span class="token operator">&</span>Mdb_cursor<span class="token punctuation">,</span> countp <span class="token operator">&</span>Mdb_size_t<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Return count of duplicates for current key. This call is only valid on databases that support sorted duplicate data items #MDB_DUPSORT. @param[in] cursor A cursor handle returned by #mdb_cursor_open() @param[out] countp Address where the count will be stored @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - cursor is not initialized, or an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_cursor_dbi" class="doc-node">
+			<div class="title"><h2>fn mdb_cursor_dbi <a href="#mdb_cursor_dbi">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_cursor_dbi</span><span class="token punctuation">(</span>cursor <span class="token operator">&</span>Mdb_cursor<span class="token punctuation">)</span> Mdb_dbi</code></pre>
+<p>Return the cursor's database handle. @param[in] cursor A cursor handle returned by #mdb_cursor_open()</p>
+
+</section>
+
+		<section id="mdb_cursor_del" class="doc-node">
+			<div class="title"><h2>fn mdb_cursor_del <a href="#mdb_cursor_del">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_cursor_del</span><span class="token punctuation">(</span>cursor <span class="token operator">&</span>Mdb_cursor<span class="token punctuation">,</span> flags <span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Delete current key/data pair This function deletes the key/data pair to which the cursor refers. This does not invalidate the cursor, so operations such as MDB_NEXT can still be used on it. Both MDB_NEXT and MDB_GET_CURRENT will return the same record after this operation. @param[in] cursor A cursor handle returned by #mdb_cursor_open() @param[in] flags Options for this operation. This parameter must be set to 0 or one of the values described here. <ul> <li>#MDB_NODUPDATA - delete all of the data items for the current key. This flag may only be specified if the database was opened with #MDB_DUPSORT. </ul> @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EACCES - an attempt was made to write in a read-only transaction. <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_cursor_get" class="doc-node">
+			<div class="title"><h2>fn mdb_cursor_get <a href="#mdb_cursor_get">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_cursor_get</span><span class="token punctuation">(</span>cursor <span class="token operator">&</span>Mdb_cursor<span class="token punctuation">,</span> key <span class="token operator">&</span>Mdb_val<span class="token punctuation">,</span> data <span class="token operator">&</span>Mdb_val<span class="token punctuation">,</span> op Mdb_cursor_op<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Retrieve by cursor. This function retrieves key/data pairs from the database. The address and length of the key are returned in the object to which \b key refers (except for the case of the #MDB_SET option, in which the \b key object is unchanged), and the address and length of the data are returned in the object to which \b data refers. See #mdb_get() for restrictions on using the output values. @param[in] cursor A cursor handle returned by #mdb_cursor_open() @param[in,out] key The key for a retrieved item @param[in,out] data The data of a retrieved item @param[in] op A cursor operation #MDB_cursor_op @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>#MDB_NOTFOUND - no matching key found. <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_cursor_open" class="doc-node">
+			<div class="title"><h2>fn mdb_cursor_open <a href="#mdb_cursor_open">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_cursor_open</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> cursor <span class="token operator">&</span><span class="token operator">&</span>Mdb_cursor<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Create a cursor handle. A cursor is associated with a specific transaction and database. A cursor cannot be used when its database handle is closed.  Nor when its transaction has ended, except with #mdb_cursor_renew(). It can be discarded with #mdb_cursor_close(). A cursor in a write-transaction can be closed before its transaction ends, and will otherwise be closed when its transaction ends. A cursor in a read-only transaction must be closed explicitly, before or after its transaction ends. It can be reused with #mdb_cursor_renew() before finally closing it. @note Earlier documentation said that cursors in every transaction were closed when the transaction committed or aborted. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[out] cursor Address where the new #MDB_cursor handle will be stored @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_cursor_put" class="doc-node">
+			<div class="title"><h2>fn mdb_cursor_put <a href="#mdb_cursor_put">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_cursor_put</span><span class="token punctuation">(</span>cursor <span class="token operator">&</span>Mdb_cursor<span class="token punctuation">,</span> key <span class="token operator">&</span>Mdb_val<span class="token punctuation">,</span> data <span class="token operator">&</span>Mdb_val<span class="token punctuation">,</span> flags <span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Store by cursor. This function stores key/data pairs into the database. The cursor is positioned at the new item, or on failure usually near it. @note Earlier documentation incorrectly said errors would leave the state of the cursor unchanged. @param[in] cursor A cursor handle returned by #mdb_cursor_open() @param[in] key The key operated on. @param[in] data The data operated on. @param[in] flags Options for this operation. This parameter must be set to 0 or one of the values described here. <ul> <li>#MDB_CURRENT - replace the item at the current cursor position. The \b key parameter must still be provided, and must match it. If using sorted duplicates (#MDB_DUPSORT) the data item must still sort into the same place. This is intended to be used when the new data is the same size as the old. Otherwise it will simply perform a delete of the old record followed by an insert. <li>#MDB_NODUPDATA - enter the new key/data pair only if it does not already appear in the database. This flag may only be specified if the database was opened with #MDB_DUPSORT. The function will return #MDB_KEYEXIST if the key/data pair already appears in the database. <li>#MDB_NOOVERWRITE - enter the new key/data pair only if the key does not already appear in the database. The function will return #MDB_KEYEXIST if the key already appears in the database, even if the database supports duplicates (#MDB_DUPSORT). <li>#MDB_RESERVE - reserve space for data of the given size, but don't copy the given data. Instead, return a pointer to the reserved space, which the caller can fill in later - before the next update operation or the transaction ends. This saves an extra memcpy if the data is being generated later. This flag must not be specified if the database was opened with #MDB_DUPSORT. <li>#MDB_APPEND - append the given key/data pair to the end of the database. No key comparisons are performed. This option allows fast bulk loading when keys are already known to be in the correct order. Loading unsorted keys with this flag will cause a #MDB_KEYEXIST error. <li>#MDB_APPENDDUP - as above, but for sorted dup data. <li>#MDB_MULTIPLE - store multiple contiguous data elements in a single request. This flag may only be specified if the database was opened with #MDB_DUPFIXED. The \b data argument must be an array of two MDB_vals. The mv_size of the first MDB_val must be the size of a single data element. The mv_data of the first MDB_val must point to the beginning of the array of contiguous data elements. The mv_size of the second MDB_val must be the count of the number of data elements to store. On return this field will be set to the count of the number of elements actually written. The mv_data of the second MDB_val is unused. </ul> @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>#MDB_MAP_FULL - the database is full, see <code>#mdb_env_set_mapsize()</code>. <li>#MDB_TXN_FULL - the transaction has too many dirty pages. <li>EACCES - an attempt was made to write in a read-only transaction. <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_cursor_renew" class="doc-node">
+			<div class="title"><h2>fn mdb_cursor_renew <a href="#mdb_cursor_renew">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_cursor_renew</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> cursor <span class="token operator">&</span>Mdb_cursor<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Renew a cursor handle. A cursor is associated with a specific transaction and database. Cursors that are only used in read-only transactions may be re-used, to avoid unnecessary malloc/free overhead. The cursor may be associated with a new read-only transaction, and referencing the same database handle as it was created with. This may be done whether the previous transaction is live or dead. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] cursor A cursor handle returned by #mdb_cursor_open() @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_cursor_txn" class="doc-node">
+			<div class="title"><h2>fn mdb_cursor_txn <a href="#mdb_cursor_txn">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_cursor_txn</span><span class="token punctuation">(</span>cursor <span class="token operator">&</span>Mdb_cursor<span class="token punctuation">)</span> <span class="token operator">&</span>Mdb_txn</code></pre>
+<p>Return the cursor's transaction handle. @param[in] cursor A cursor handle returned by #mdb_cursor_open()</p>
+
+</section>
+
+		<section id="mdb_dbi_close" class="doc-node">
+			<div class="title"><h2>fn mdb_dbi_close <a href="#mdb_dbi_close">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_dbi_close</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">)</span></code></pre>
+<p>Close a database handle. Normally unnecessary. Use with care: This call is not mutex protected. Handles should only be closed by a single thread, and only if no other threads are going to reference the database handle or one of its cursors any further. Do not close a handle if an existing transaction has modified its database. Doing so can cause misbehavior from database corruption to errors like MDB_BAD_VALSIZE (since the DB name is gone). Closing a database handle is not necessary, but lets #mdb_dbi_open() reuse the handle value.  Usually it's better to set a bigger <code>#mdb_env_set_maxdbs()</code>, unless that value would be large. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[in] dbi A database handle returned by #mdb_dbi_open()</p>
+
+</section>
+
+		<section id="mdb_dbi_flags" class="doc-node">
+			<div class="title"><h2>fn mdb_dbi_flags <a href="#mdb_dbi_flags">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_dbi_flags</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> flags <span class="token operator">&</span><span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Retrieve the DB flags for a database handle. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[out] flags Address where the flags will be returned. @return A non-zero error value on failure and 0 on success.</p>
+
+</section>
+
+		<section id="mdb_dbi_open" class="doc-node">
+			<div class="title"><h2>fn mdb_dbi_open <a href="#mdb_dbi_open">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_dbi_open</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> const_name <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">,</span> flags <span class="token builtin">u32</span><span class="token punctuation">,</span> dbi <span class="token operator">&</span>Mdb_dbi<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>*Compat with version &lt;= 0.9.4, avoid clash with libmdb from MDB Tools project *Compat with version &lt;= 0.9.4, avoid clash with libmdb from MDB Tools project Open a database in the environment. A database handle denotes the name and parameters of a database, independently of whether such a database exists. The database handle may be discarded by calling #mdb_dbi_close(). The old database handle is returned if the database was already open. The handle may only be closed once. The database handle will be private to the current transaction until the transaction is successfully committed. If the transaction is aborted the handle will be closed automatically. After a successful commit the handle will reside in the shared environment, and may be used by other transactions. This function must not be called from multiple concurrent transactions in the same process. A transaction that uses this function must finish (either commit or abort) before any other transaction in the process may use this function. To use named databases (with name != NULL), <code>#mdb_env_set_maxdbs()</code> must be called before opening the environment.  Database names are keys in the unnamed database, and may be read but not written. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] name The name of the database to open. If only a single database is needed in the environment, this value may be NULL. @param[in] flags Special options for this database. This parameter must be set to 0 or by bitwise OR'ing together one or more of the values described here. <ul> <li>#MDB_REVERSEKEY Keys are strings to be compared in reverse order, from the end of the strings to the beginning. By default, Keys are treated as strings and compared from beginning to end. <li>#MDB_DUPSORT Duplicate keys may be used in the database. (Or, from another perspective, keys may have multiple data items, stored in sorted order.) By default keys must be unique and may have only a single data item. <li>#MDB_INTEGERKEY Keys are binary integers in native byte order, either unsigned int or <code>#mdb_size_t</code>, and will be sorted as such. (lmdb expects 32-bit int &lt;= size_t &lt;= 32/64-bit mdb_size_t.) The keys must all be of the same size. <li>#MDB_DUPFIXED This flag may only be used in combination with #MDB_DUPSORT. This option tells the library that the data items for this database are all the same size, which allows further optimizations in storage and retrieval. When all data items are the same size, the #MDB_GET_MULTIPLE, #MDB_NEXT_MULTIPLE and #MDB_PREV_MULTIPLE cursor operations may be used to retrieve multiple items at once. <li>#MDB_INTEGERDUP This option specifies that duplicate data items are binary integers, similar to #MDB_INTEGERKEY keys. <li>#MDB_REVERSEDUP This option specifies that duplicate data items should be compared as strings in reverse order. <li>#MDB_CREATE Create the named database if it doesn't exist. This option is not allowed in a read-only transaction or a read-only environment. </ul> @param[out] dbi Address where the new #Mdb_dbi handle will be stored @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>#MDB_NOTFOUND - the specified database doesn't exist in the environment and #MDB_CREATE was not specified. <li>#MDB_DBS_FULL - too many databases have been opened. See <code>#mdb_env_set_maxdbs()</code>. </ul></p>
+
+</section>
+
+		<section id="mdb_dcmp" class="doc-node">
+			<div class="title"><h2>fn mdb_dcmp <a href="#mdb_dcmp">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_dcmp</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> const_a <span class="token operator">&</span>Mdb_val<span class="token punctuation">,</span> const_b <span class="token operator">&</span>Mdb_val<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Compare two data items according to a particular database. This returns a comparison as if the two items were data items of the specified database. The database must have the #MDB_DUPSORT flag. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[in] a The first item to compare @param[in] b The second item to compare @return &lt; 0 if a &lt; b, 0 if a == b, &gt; 0 if a &gt; b</p>
+
+</section>
+
+		<section id="mdb_del" class="doc-node">
+			<div class="title"><h2>fn mdb_del <a href="#mdb_del">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_del</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> key <span class="token operator">&</span>Mdb_val<span class="token punctuation">,</span> data <span class="token operator">&</span>Mdb_val<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Delete items from a database. This function removes key/data pairs from the database. If the database does not support sorted duplicate data items (#MDB_DUPSORT) the data parameter is ignored. If the database supports sorted duplicates and the data parameter is NULL, all of the duplicate data items for the key will be deleted. Otherwise, if the data parameter is non-NULL only the matching data item will be deleted. This function will return #MDB_NOTFOUND if the specified key/data pair is not in the database. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[in] key The key to delete from the database @param[in] data The data to delete @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EACCES - an attempt was made to write in a read-only transaction. <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_drop" class="doc-node">
+			<div class="title"><h2>fn mdb_drop <a href="#mdb_drop">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_drop</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> del <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Empty or delete+close a database. See #mdb_dbi_close() for restrictions about closing the DB handle. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[in] del 0 to empty the DB, 1 to delete it from the environment and close the DB handle. @return A non-zero error value on failure and 0 on success.</p>
+
+</section>
+
+		<section id="mdb_env_close" class="doc-node">
+			<div class="title"><h2>fn mdb_env_close <a href="#mdb_env_close">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_close</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">)</span></code></pre>
+<p>Close the environment and release the memory map. Only a single thread may call this function. All transactions, databases, and cursors must already be closed before calling this function. Attempts to use any such handles after calling this function will cause a SIGSEGV. The environment handle will be freed and must not be used again after this call. @param[in] env An environment handle returned by <code>#mdb_env_create()</code></p>
+
+</section>
+
+		<section id="mdb_env_copy" class="doc-node">
+			<div class="title"><h2>fn mdb_env_copy <a href="#mdb_env_copy">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_copy</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> const_path <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Copy an LMDB environment to the specified path. This function may be used to make a backup of an existing environment. No lockfile is created, since it gets recreated at need. @note This call can trigger significant file size growth if run in parallel with write transactions, because it employs a read-only transaction. See long-lived transactions under @ref caveats_sec. @param[in] env An environment handle returned by <code>#mdb_env_create()</code>. It must have already been opened successfully. @param[in] path The directory in which the copy will reside. This directory must already exist and be writable but must otherwise be empty. @return A non-zero error value on failure and 0 on success.</p>
+
+</section>
+
+		<section id="mdb_env_copy2" class="doc-node">
+			<div class="title"><h2>fn mdb_env_copy2 <a href="#mdb_env_copy2">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_copy2</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> const_path <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">,</span> flags <span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Copy an LMDB environment to the specified path, with options. This function may be used to make a backup of an existing environment. No lockfile is created, since it gets recreated at need. @note This call can trigger significant file size growth if run in parallel with write transactions, because it employs a read-only transaction. See long-lived transactions under @ref caveats_sec. @param[in] env An environment handle returned by <code>#mdb_env_create()</code>. It must have already been opened successfully. @param[in] path The directory in which the copy will reside. This directory must already exist and be writable but must otherwise be empty. @param[in] flags Special options for this operation. This parameter must be set to 0 or by bitwise OR'ing together one or more of the values described here. <ul> <li>#MDB_CP_COMPACT - Perform compaction while copying: omit free pages and sequentially renumber all pages in output. This option consumes more CPU and runs more slowly than the default. Currently it fails if the environment has suffered a page leak. </ul> @return A non-zero error value on failure and 0 on success.</p>
+
+</section>
+
+		<section id="mdb_env_copyfd" class="doc-node">
+			<div class="title"><h2>fn mdb_env_copyfd <a href="#mdb_env_copyfd">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_copyfd</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> fd Mdb_filehandle_t<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Copy an LMDB environment to the specified file descriptor. This function may be used to make a backup of an existing environment. No lockfile is created, since it gets recreated at need. @note This call can trigger significant file size growth if run in parallel with write transactions, because it employs a read-only transaction. See long-lived transactions under @ref caveats_sec. @param[in] env An environment handle returned by <code>#mdb_env_create()</code>. It must have already been opened successfully. @param[in] fd The filedescriptor to write the copy to. It must have already been opened for Write access. @return A non-zero error value on failure and 0 on success.</p>
+
+</section>
+
+		<section id="mdb_env_copyfd2" class="doc-node">
+			<div class="title"><h2>fn mdb_env_copyfd2 <a href="#mdb_env_copyfd2">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_copyfd2</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> fd Mdb_filehandle_t<span class="token punctuation">,</span> flags <span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Copy an LMDB environment to the specified file descriptor, with options. This function may be used to make a backup of an existing environment. No lockfile is created, since it gets recreated at need. See #mdb_env_copy2() for further details. @note This call can trigger significant file size growth if run in parallel with write transactions, because it employs a read-only transaction. See long-lived transactions under @ref caveats_sec. @param[in] env An environment handle returned by <code>#mdb_env_create()</code>. It must have already been opened successfully. @param[in] fd The filedescriptor to write the copy to. It must have already been opened for Write access. @param[in] flags Special options for this operation. See #mdb_env_copy2() for options. @return A non-zero error value on failure and 0 on success.</p>
+
+</section>
+
+		<section id="mdb_env_create" class="doc-node">
+			<div class="title"><h2>fn mdb_env_create <a href="#mdb_env_create">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_create</span><span class="token punctuation">(</span>env <span class="token operator">&</span><span class="token operator">&</span>Mdb_env<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Create an LMDB environment handle. This function allocates memory for a <code>#MDB_env</code> structure. To release the allocated memory and discard the handle, call <code>#mdb_env_close()</code>. Before the handle may be used, it must be opened using <code>#mdb_env_open()</code>. Various other options may also need to be set before opening the handle, e.g. <code>#mdb_env_set_mapsize()</code>, <code>#mdb_env_set_maxreaders()</code>, <code>#mdb_env_set_maxdbs()</code>, depending on usage requirements. @param[out] env The address where the new handle will be stored @return A non-zero error value on failure and 0 on success.</p>
+
+</section>
+
+		<section id="mdb_env_get_fd" class="doc-node">
+			<div class="title"><h2>fn mdb_env_get_fd <a href="#mdb_env_get_fd">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_get_fd</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> fd <span class="token operator">&</span>Mdb_filehandle_t<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Return the filedescriptor for the given environment. This function may be called after fork(), so the descriptor can be closed before exec*).  Other LMDB file descriptors have FD_CLOEXEC. (Until LMDB 0.9.18, only the lockfile had that.) @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[out] fd Address of a mdb_filehandle_t to contain the descriptor. @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_env_get_flags" class="doc-node">
+			<div class="title"><h2>fn mdb_env_get_flags <a href="#mdb_env_get_flags">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_get_flags</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> flags <span class="token operator">&</span><span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Get environment flags. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[out] flags The address of an integer to store the flags @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_env_get_maxkeysize" class="doc-node">
+			<div class="title"><h2>fn mdb_env_get_maxkeysize <a href="#mdb_env_get_maxkeysize">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_get_maxkeysize</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Get the maximum size of keys and #MDB_DUPSORT data we can write. Depends on the compile-time constant #MDB_MAXKEYSIZE. Default 511. See @ref MDB_val. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @return The maximum size of a key we can write</p>
+
+</section>
+
+		<section id="mdb_env_get_maxreaders" class="doc-node">
+			<div class="title"><h2>fn mdb_env_get_maxreaders <a href="#mdb_env_get_maxreaders">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_get_maxreaders</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> readers <span class="token operator">&</span><span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Get the maximum number of threads/reader slots for the environment. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[out] readers Address of an integer to store the number of readers @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_env_get_path" class="doc-node">
+			<div class="title"><h2>fn mdb_env_get_path <a href="#mdb_env_get_path">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_get_path</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> const_path <span class="token operator">&</span><span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Return the path that was used in <code>#mdb_env_open()</code>. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[out] path Address of a string pointer to contain the path. This is the actual string in the environment, not a copy. It should not be altered in any way. @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_env_get_userctx" class="doc-node">
+			<div class="title"><h2>fn mdb_env_get_userctx <a href="#mdb_env_get_userctx">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_get_userctx</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">)</span> <span class="token builtin">voidptr</span></code></pre>
+<p>Get the application information associated with the #MDB_env. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @return The pointer set by #mdb_env_set_userctx().</p>
+
+</section>
+
+		<section id="mdb_env_info" class="doc-node">
+			<div class="title"><h2>fn mdb_env_info <a href="#mdb_env_info">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_info</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> stat <span class="token operator">&</span>Mdb_envinfo<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Return information about the LMDB environment. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[out] stat The address of an #MDB_envinfo structure where the information will be copied</p>
+
+</section>
+
+		<section id="mdb_env_open" class="doc-node">
+			<div class="title"><h2>fn mdb_env_open <a href="#mdb_env_open">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_open</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> const_path <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">,</span> flags <span class="token builtin">u32</span><span class="token punctuation">,</span> mode Mdb_mode_t<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Open an environment handle. If this function fails, <code>#mdb_env_close()</code> must be called to discard the <code>#MDB_env</code> handle. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[in] path The directory in which the database files reside. This directory must already exist and be writable. @param[in] flags Special options for this environment. This parameter must be set to 0 or by bitwise OR'ing together one or more of the values described here. Flags set by mdb_env_set_flags() are also used. <ul> <li>#MDB_FIXEDMAP use a fixed address for the mmap region. This flag must be specified when creating the environment, and is stored persistently in the environment. If successful, the memory map will always reside at the same virtual address and pointers used to reference data items in the database will be constant across multiple invocations. This option may not always work, depending on how the operating system has allocated memory to shared libraries and other uses. The feature is highly experimental. <li>#MDB_NOSUBDIR By default, LMDB creates its environment in a directory whose pathname is given in \b path, and creates its data and lock files under that directory. With this option, \b path is used as-is for the database main data file. The database lock file is the \b path with "-lock" appended. <li>#MDB_RDONLY Open the environment in read-only mode. No write operations will be allowed. LMDB will still modify the lock file - except on read-only filesystems, where LMDB does not use locks. <li>#MDB_WRITEMAP Use a writeable memory map unless MDB_RDONLY is set. This uses fewer mallocs but loses protection from application bugs like wild pointer writes and other bad updates into the database. This may be slightly faster for DBs that fit entirely in RAM, but is slower for DBs larger than RAM. Incompatible with nested transactions. Do not mix processes with and without MDB_WRITEMAP on the same environment.  This can defeat durability (#mdb_env_sync etc). <li>#MDB_NOMETASYNC Flush system buffers to disk only once per transaction, omit the metadata flush. Defer that until the system flushes files to disk, or next non-MDB_RDONLY commit or #mdb_env_sync(). This optimization maintains database integrity, but a system crash may undo the last committed transaction. I.e. it preserves the ACI (atomicity, consistency, isolation) but not D (durability) database property. This flag may be changed at any time using #mdb_env_set_flags(). <li>#MDB_NOSYNC Don't flush system buffers to disk when committing a transaction. This optimization means a system crash can corrupt the database or lose the last transactions if buffers are not yet flushed to disk. The risk is governed by how often the system flushes dirty buffers to disk and how often #mdb_env_sync() is called.  However, if the filesystem preserves write order and the #MDB_WRITEMAP flag is not used, transactions exhibit ACI (atomicity, consistency, isolation) properties and only lose D (durability).  I.e. database integrity is maintained, but a system crash may undo the final transactions. Note that (#MDB_NOSYNC | #MDB_WRITEMAP) leaves the system with no hint for when to write transactions to disk, unless #mdb_env_sync() is called. (#MDB_MAPASYNC | #MDB_WRITEMAP) may be preferable. This flag may be changed at any time using #mdb_env_set_flags(). <li>#MDB_MAPASYNC When using #MDB_WRITEMAP, use asynchronous flushes to disk. As with #MDB_NOSYNC, a system crash can then corrupt the database or lose the last transactions. Calling #mdb_env_sync() ensures on-disk database integrity until next commit. This flag may be changed at any time using #mdb_env_set_flags(). <li>#MDB_NOTLS Don't use Thread-Local Storage. Tie reader locktable slots to #MDB_txn objects instead of to threads. I.e. #mdb_txn_reset() keeps the slot reserved for the #MDB_txn object. A thread may use parallel read-only transactions. A read-only transaction may span threads if the user synchronizes its use. Applications that multiplex many user threads over individual OS threads need this option. Such an application must also serialize the write transactions in an OS thread, since LMDB's write locking is unaware of the user threads. <li>#MDB_NOLOCK Don't do any locking. If concurrent access is anticipated, the caller must manage all concurrency itself. For proper operation the caller must enforce single-writer semantics, and must ensure that no readers are using old transactions while a writer is active. The simplest approach is to use an exclusive lock so that no readers may be active at all when a writer begins. <li>#MDB_NORDAHEAD Turn off readahead. Most operating systems perform readahead on read requests by default. This option turns it off if the OS supports it. Turning it off may help random read performance when the DB is larger than RAM and system RAM is full. The option is not implemented on Windows. <li>#MDB_NOMEMINIT Don't initialize malloc'd memory before writing to unused spaces in the data file. By default, memory for pages written to the data file is obtained using malloc. While these pages may be reused in subsequent transactions, freshly malloc'd pages will be initialized to zeroes before use. This avoids persisting leftover data from other code (that used the heap and subsequently freed the memory) into the data file. Note that many other system libraries may allocate and free memory from the heap for arbitrary uses. E.g., stdio may use the heap for file I/O buffers. This initialization step has a modest performance cost so some applications may want to disable it using this flag. This option can be a problem for applications which handle sensitive data like passwords, and it makes memory checkers like Valgrind noisy. This flag is not needed with #MDB_WRITEMAP, which writes directly to the mmap instead of using malloc for pages. The initialization is also skipped if #MDB_RESERVE is used; the caller is expected to overwrite all of the memory that was reserved in that case. This flag may be changed at any time using #mdb_env_set_flags(). <li>#MDB_PREVSNAPSHOT Open the environment with the previous snapshot rather than the latest one. This loses the latest transaction, but may help work around some types of corruption. If opened with write access, this must be the only process using the environment. This flag is automatically reset after a write transaction is successfully committed. </ul> @param[in] mode The UNIX permissions to set on created files and semaphores. This parameter is ignored on Windows. @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>#MDB_VERSION_MISMATCH - the version of the LMDB library doesn't match the version that created the database environment. <li>#MDB_INVALID - the environment file headers are corrupted. <li>ENOENT - the directory specified by the path parameter doesn't exist. <li>EACCES - the user didn't have permission to access the environment files. <li>EAGAIN - the environment was locked by another process. </ul></p>
+
+</section>
+
+		<section id="mdb_env_set_assert" class="doc-node">
+			<div class="title"><h2>fn mdb_env_set_assert <a href="#mdb_env_set_assert">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_set_assert</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> func MDB_assert_func<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>*Set or reset the assert() callback of the environment. Disabled if liblmdb is built with NDEBUG. @note This hack should become obsolete as lmdb's error handling matures. @param[in] env An environment handle returned by <code>#mdb_env_create()</code>. @param[in] func An #MDB_assert_func function, or 0. @return A non-zero error value on failure and 0 on success.</p>
+
+</section>
+
+		<section id="mdb_env_set_flags" class="doc-node">
+			<div class="title"><h2>fn mdb_env_set_flags <a href="#mdb_env_set_flags">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_set_flags</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> flags <span class="token builtin">u32</span><span class="token punctuation">,</span> onoff <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Set environment flags. This may be used to set some flags in addition to those from <code>#mdb_env_open()</code>, or to unset these flags.  If several threads change the flags at the same time, the result is undefined. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[in] flags The flags to change, bitwise OR'ed together @param[in] onoff A non-zero value sets the flags, zero clears them. @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_env_set_mapsize" class="doc-node">
+			<div class="title"><h2>fn mdb_env_set_mapsize <a href="#mdb_env_set_mapsize">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_set_mapsize</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> size Mdb_size_t<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Set the size of the memory map to use for this environment. The size should be a multiple of the OS page size. The default is 10485760 bytes. The size of the memory map is also the maximum size of the database. The value should be chosen as large as possible, to accommodate future growth of the database. This function should be called after <code>#mdb_env_create()</code> and before <code>#mdb_env_open()</code>. It may be called at later times if no transactions are active in this process. Note that the library does not check for this condition, the caller must ensure it explicitly. The new size takes effect immediately for the current process but will not be persisted to any others until a write transaction has been committed by the current process. Also, only mapsize increases are persisted into the environment. If the mapsize is increased by another process, and data has grown beyond the range of the current mapsize, #mdb_txn_begin() will return #MDB_MAP_RESIZED. This function may be called with a size of zero to adopt the new size. Any attempt to set a size smaller than the space already consumed by the environment will be silently changed to the current size of the used space. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[in] size The size in bytes @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified, or the environment has an active write transaction. </ul></p>
+
+</section>
+
+		<section id="mdb_env_set_maxdbs" class="doc-node">
+			<div class="title"><h2>fn mdb_env_set_maxdbs <a href="#mdb_env_set_maxdbs">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_set_maxdbs</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> dbs Mdb_dbi<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Set the maximum number of named databases for the environment. This function is only needed if multiple databases will be used in the environment. Simpler applications that use the environment as a single unnamed database can ignore this option. This function may only be called after <code>#mdb_env_create()</code> and before <code>#mdb_env_open()</code>. Currently a moderate number of slots are cheap but a huge number gets expensive: 7-120 words per transaction, and every #mdb_dbi_open() does a linear search of the opened slots. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[in] dbs The maximum number of databases @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified, or the environment is already open. </ul></p>
+
+</section>
+
+		<section id="mdb_env_set_maxreaders" class="doc-node">
+			<div class="title"><h2>fn mdb_env_set_maxreaders <a href="#mdb_env_set_maxreaders">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_set_maxreaders</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> readers <span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Set the maximum number of threads/reader slots for the environment. This defines the number of slots in the lock table that is used to track readers in the the environment. The default is 126. Starting a read-only transaction normally ties a lock table slot to the current thread until the environment closes or the thread exits. If MDB_NOTLS is in use, #mdb_txn_begin() instead ties the slot to the MDB_txn object until it or the <code>#MDB_env</code> object is destroyed. This function may only be called after <code>#mdb_env_create()</code> and before <code>#mdb_env_open()</code>. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[in] readers The maximum number of reader lock table slots @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified, or the environment is already open. </ul></p>
+
+</section>
+
+		<section id="mdb_env_set_userctx" class="doc-node">
+			<div class="title"><h2>fn mdb_env_set_userctx <a href="#mdb_env_set_userctx">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_set_userctx</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> ctx <span class="token builtin">voidptr</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Set application information associated with the #MDB_env. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[in] ctx An arbitrary pointer for whatever the application needs. @return A non-zero error value on failure and 0 on success.</p>
+
+</section>
+
+		<section id="mdb_env_stat" class="doc-node">
+			<div class="title"><h2>fn mdb_env_stat <a href="#mdb_env_stat">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_stat</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> stat <span class="token operator">&</span>Mdb_stat<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Return statistics about the LMDB environment. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[out] stat The address of an #MDB_stat structure where the statistics will be copied</p>
+
+</section>
+
+		<section id="mdb_env_sync" class="doc-node">
+			<div class="title"><h2>fn mdb_env_sync <a href="#mdb_env_sync">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_env_sync</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> force <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Flush the data buffers to disk. Data is always written to disk when #mdb_txn_commit() is called, but the operating system may keep it buffered. LMDB always flushes the OS buffers upon commit as well, unless the environment was opened with #MDB_NOSYNC or in part #MDB_NOMETASYNC. This call is not valid if the environment was opened with #MDB_RDONLY. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[in] force If non-zero, force a synchronous flush.  Otherwise if the environment has the #MDB_NOSYNC flag set the flushes will be omitted, and with #MDB_MAPASYNC they will be asynchronous. @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EACCES - the environment is read-only. <li>EINVAL - an invalid parameter was specified. <li>EIO - an error occurred during synchronization. </ul></p>
+
+</section>
+
+		<section id="mdb_get" class="doc-node">
+			<div class="title"><h2>fn mdb_get <a href="#mdb_get">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_get</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> key <span class="token operator">&</span>Mdb_val<span class="token punctuation">,</span> data <span class="token operator">&</span>Mdb_val<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Get items from a database. This function retrieves key/data pairs from the database. The address and length of the data associated with the specified \b key are returned in the structure to which \b data refers. If the database supports duplicate keys (#MDB_DUPSORT) then the first data item for the key will be returned. Retrieval of other items requires the use of #mdb_cursor_get(). @note The memory pointed to by the returned values is owned by the database. The caller need not dispose of the memory, and may not modify it in any way. For values returned in a read-only transaction any modification attempts will cause a SIGSEGV. @note Values returned from the database are valid only until a subsequent update operation, or the end of the transaction. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[in] key The key to search for in the database @param[out] data The data corresponding to the key @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>#MDB_NOTFOUND - the key was not in the database. <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_put" class="doc-node">
+			<div class="title"><h2>fn mdb_put <a href="#mdb_put">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_put</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> key <span class="token operator">&</span>Mdb_val<span class="token punctuation">,</span> data <span class="token operator">&</span>Mdb_val<span class="token punctuation">,</span> flags <span class="token builtin">u32</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Store items into a database. This function stores key/data pairs in the database. The default behavior is to enter the new key/data pair, replacing any previously existing key if duplicates are disallowed, or adding a duplicate data item if duplicates are allowed (#MDB_DUPSORT). @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[in] key The key to store in the database @param[in,out] data The data to store @param[in] flags Special options for this operation. This parameter must be set to 0 or by bitwise OR'ing together one or more of the values described here. <ul> <li>#MDB_NODUPDATA - enter the new key/data pair only if it does not already appear in the database. This flag may only be specified if the database was opened with #MDB_DUPSORT. The function will return #MDB_KEYEXIST if the key/data pair already appears in the database. <li>#MDB_NOOVERWRITE - enter the new key/data pair only if the key does not already appear in the database. The function will return #MDB_KEYEXIST if the key already appears in the database, even if the database supports duplicates (#MDB_DUPSORT). The \b data parameter will be set to point to the existing item. <li>#MDB_RESERVE - reserve space for data of the given size, but don't copy the given data. Instead, return a pointer to the reserved space, which the caller can fill in later - before the next update operation or the transaction ends. This saves an extra memcpy if the data is being generated later. LMDB does nothing else with this memory, the caller is expected to modify all of the space requested. This flag must not be specified if the database was opened with #MDB_DUPSORT. <li>#MDB_APPEND - append the given key/data pair to the end of the database. This option allows fast bulk loading when keys are already known to be in the correct order. Loading unsorted keys with this flag will cause a #MDB_KEYEXIST error. <li>#MDB_APPENDDUP - as above, but for sorted dup data. </ul> @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>#MDB_MAP_FULL - the database is full, see <code>#mdb_env_set_mapsize()</code>. <li>#MDB_TXN_FULL - the transaction has too many dirty pages. <li>EACCES - an attempt was made to write in a read-only transaction. <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_reader_check" class="doc-node">
+			<div class="title"><h2>fn mdb_reader_check <a href="#mdb_reader_check">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_reader_check</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> dead <span class="token operator">&</span><span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Check for stale entries in the reader lock table. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[out] dead Number of stale slots that were cleared @return 0 on success, non-zero on failure.</p>
+
+</section>
+
+		<section id="mdb_reader_list" class="doc-node">
+			<div class="title"><h2>fn mdb_reader_list <a href="#mdb_reader_list">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_reader_list</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> func MDB_msg_func<span class="token punctuation">,</span> ctx <span class="token builtin">voidptr</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Dump the entries in the reader lock table. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[in] func A #MDB_msg_func function @param[in] ctx Anything the message function needs @return &lt; 0 on failure, &gt;= 0 on success.</p>
+
+</section>
+
+		<section id="mdb_set_compare" class="doc-node">
+			<div class="title"><h2>fn mdb_set_compare <a href="#mdb_set_compare">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_set_compare</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> cmp MDB_cmp_func<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Set a custom key comparison function for a database. The comparison function is called whenever it is necessary to compare a key specified by the application with a key currently stored in the database. If no comparison function is specified, and no special key flags were specified with #mdb_dbi_open(), the keys are compared lexically, with shorter keys collating before longer keys. @warning This function must be called before any data access functions are used, otherwise data corruption may occur. The same comparison function must be used by every program accessing the database, every time the database is used. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[in] cmp A #MDB_cmp_func function @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_set_dupsort" class="doc-node">
+			<div class="title"><h2>fn mdb_set_dupsort <a href="#mdb_set_dupsort">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_set_dupsort</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> cmp MDB_cmp_func<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Set a custom data comparison function for a #MDB_DUPSORT database. This comparison function is called whenever it is necessary to compare a data item specified by the application with a data item currently stored in the database. This function only takes effect if the database was opened with the #MDB_DUPSORT flag. If no comparison function is specified, and no special key flags were specified with #mdb_dbi_open(), the data items are compared lexically, with shorter items collating before longer items. @warning This function must be called before any data access functions are used, otherwise data corruption may occur. The same comparison function must be used by every program accessing the database, every time the database is used. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[in] cmp A #MDB_cmp_func function @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_set_relctx" class="doc-node">
+			<div class="title"><h2>fn mdb_set_relctx <a href="#mdb_set_relctx">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_set_relctx</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> ctx <span class="token builtin">voidptr</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Set a context pointer for a #MDB_FIXEDMAP database's relocation function. See #mdb_set_relfunc and #MDB_rel_func for more details. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[in] ctx An arbitrary pointer for whatever the application needs. It will be passed to the callback function set by #mdb_set_relfunc as its \b relctx parameter whenever the callback is invoked. @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_set_relfunc" class="doc-node">
+			<div class="title"><h2>fn mdb_set_relfunc <a href="#mdb_set_relfunc">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_set_relfunc</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> rel MDB_rel_func<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Set a relocation function for a #MDB_FIXEDMAP database. @todo The relocation function is called whenever it is necessary to move the data of an item to a different position in the database (e.g. through tree balancing operations, shifts as a result of adds or deletes, etc.). It is intended to allow address/position-dependent data items to be stored in a database in an environment opened with the #MDB_FIXEDMAP option. Currently the relocation feature is unimplemented and setting this function has no effect. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[in] rel A #MDB_rel_func function @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_stat" class="doc-node">
+			<div class="title"><h2>fn mdb_stat <a href="#mdb_stat">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_stat</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> dbi Mdb_dbi<span class="token punctuation">,</span> stat <span class="token operator">&</span>Mdb_stat<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Retrieve statistics for a database. @param[in] txn A transaction handle returned by #mdb_txn_begin() @param[in] dbi A database handle returned by #mdb_dbi_open() @param[out] stat The address of an #MDB_stat structure where the statistics will be copied @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_strerror" class="doc-node">
+			<div class="title"><h2>fn mdb_strerror <a href="#mdb_strerror">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_strerror</span><span class="token punctuation">(</span>err <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">&</span><span class="token builtin">char</span></code></pre>
+<p>Return a string describing a given error code. This function is a superset of the ANSI C X3.159-1989 (ANSI C) strerror(3) function. If the error code is greater than or equal to 0, then the string returned by the system function strerror(3) is returned. If the error code is less than 0, an error string corresponding to the LMDB library error is returned. See @ref errors for a list of LMDB-specific error codes. @param[in] err The error code @retval "error message" The description of the error</p>
+
+</section>
+
+		<section id="mdb_txn_abort" class="doc-node">
+			<div class="title"><h2>fn mdb_txn_abort <a href="#mdb_txn_abort">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_txn_abort</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">)</span></code></pre>
+<p>Abandon all the operations of the transaction instead of saving them. The transaction handle is freed. It and its cursors must not be used again after this call, except with #mdb_cursor_renew(). @note Earlier documentation incorrectly said all cursors would be freed. Only write-transactions free cursors. @param[in] txn A transaction handle returned by #mdb_txn_begin()</p>
+
+</section>
+
+		<section id="mdb_txn_begin" class="doc-node">
+			<div class="title"><h2>fn mdb_txn_begin <a href="#mdb_txn_begin">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_txn_begin</span><span class="token punctuation">(</span>env <span class="token operator">&</span>Mdb_env<span class="token punctuation">,</span> parent <span class="token operator">&</span>Mdb_txn<span class="token punctuation">,</span> flags <span class="token builtin">u32</span><span class="token punctuation">,</span> txn <span class="token operator">&</span><span class="token operator">&</span>Mdb_txn<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Create a transaction for use with the environment. The transaction handle may be discarded using #mdb_txn_abort() or #mdb_txn_commit(). @note A transaction and its cursors must only be used by a single thread, and a thread may only have a single transaction at a time. If #MDB_NOTLS is in use, this does not apply to read-only transactions. @note Cursors may not span transactions. @param[in] env An environment handle returned by <code>#mdb_env_create()</code> @param[in] parent If this parameter is non-NULL, the new transaction will be a nested transaction, with the transaction indicated by \b parent as its parent. Transactions may be nested to any level. A parent transaction and its cursors may not issue any other operations than mdb_txn_commit and mdb_txn_abort while it has active child transactions. @param[in] flags Special options for this transaction. This parameter must be set to 0 or by bitwise OR'ing together one or more of the values described here. <ul> <li>#MDB_RDONLY This transaction will not perform any write operations. <li>#MDB_NOSYNC Don't flush system buffers to disk when committing this transaction. <li>#MDB_NOMETASYNC Flush system buffers but omit metadata flush when committing this transaction. </ul> @param[out] txn Address where the new #MDB_txn handle will be stored @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>#MDB_PANIC - a fatal error occurred earlier and the environment must be shut down. <li>#MDB_MAP_RESIZED - another process wrote data beyond this MDB_env's mapsize and this environment's map must be resized as well. See <code>#mdb_env_set_mapsize()</code>. <li>#MDB_READERS_FULL - a read-only transaction was requested and the reader lock table is full. See <code>#mdb_env_set_maxreaders()</code>. <li>ENOMEM - out of memory. </ul></p>
+
+</section>
+
+		<section id="mdb_txn_commit" class="doc-node">
+			<div class="title"><h2>fn mdb_txn_commit <a href="#mdb_txn_commit">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_txn_commit</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Commit all the operations of a transaction into the database. The transaction handle is freed. It and its cursors must not be used again after this call, except with #mdb_cursor_renew(). @note Earlier documentation incorrectly said all cursors would be freed. Only write-transactions free cursors. @param[in] txn A transaction handle returned by #mdb_txn_begin() @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>EINVAL - an invalid parameter was specified. <li>ENOSPC - no more disk space. <li>EIO - a low-level I/O error occurred while writing. <li>ENOMEM - out of memory. </ul></p>
+
+</section>
+
+		<section id="mdb_txn_env" class="doc-node">
+			<div class="title"><h2>fn mdb_txn_env <a href="#mdb_txn_env">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_txn_env</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">)</span> <span class="token operator">&</span>Mdb_env</code></pre>
+<p>Returns the transaction's #MDB_env @param[in] txn A transaction handle returned by #mdb_txn_begin()</p>
+
+</section>
+
+		<section id="mdb_txn_id" class="doc-node">
+			<div class="title"><h2>fn mdb_txn_id <a href="#mdb_txn_id">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_txn_id</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">)</span> Mdb_size_t</code></pre>
+<p>Return the transaction's ID. This returns the identifier associated with this transaction. For a read-only transaction, this corresponds to the snapshot being read; concurrent readers will frequently have the same transaction ID. @param[in] txn A transaction handle returned by #mdb_txn_begin() @return A transaction ID, valid if input is an active transaction.</p>
+
+</section>
+
+		<section id="mdb_txn_renew" class="doc-node">
+			<div class="title"><h2>fn mdb_txn_renew <a href="#mdb_txn_renew">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_txn_renew</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>Renew a read-only transaction. This acquires a new reader lock for a transaction handle that had been released by #mdb_txn_reset(). It must be called before a reset transaction may be used again. @param[in] txn A transaction handle returned by #mdb_txn_begin() @return A non-zero error value on failure and 0 on success. Some possible errors are: <ul> <li>#MDB_PANIC - a fatal error occurred earlier and the environment must be shut down. <li>EINVAL - an invalid parameter was specified. </ul></p>
+
+</section>
+
+		<section id="mdb_txn_reset" class="doc-node">
+			<div class="title"><h2>fn mdb_txn_reset <a href="#mdb_txn_reset">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_txn_reset</span><span class="token punctuation">(</span>txn <span class="token operator">&</span>Mdb_txn<span class="token punctuation">)</span></code></pre>
+<p>Reset a read-only transaction. Abort the transaction like #mdb_txn_abort(), but keep the transaction handle. #mdb_txn_renew() may reuse the handle. This saves allocation overhead if the process will start a new read-only transaction soon, and also locking overhead if #MDB_NOTLS is in use. The reader table lock is released, but the table slot stays tied to its thread or #MDB_txn. Use mdb_txn_abort() to discard a reset handle, and to free its lock table slot if MDB_NOTLS is in use. Cursors opened within the transaction must not be used again after this call, except with #mdb_cursor_renew(). Reader locks generally don't interfere with writers, but they keep old versions of database pages allocated. Thus they prevent the old pages from being reused when writers commit new data, and so under heavy load the database size may grow much more rapidly than otherwise. @param[in] txn A transaction handle returned by #mdb_txn_begin()</p>
+
+</section>
+
+		<section id="mdb_version" class="doc-node">
+			<div class="title"><h2>fn mdb_version <a href="#mdb_version">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">fn</span> <span class="token function">mdb_version</span><span class="token punctuation">(</span>major <span class="token operator">&</span><span class="token builtin">int</span><span class="token punctuation">,</span> minor <span class="token operator">&</span><span class="token builtin">int</span><span class="token punctuation">,</span> patch <span class="token operator">&</span><span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">&</span><span class="token builtin">char</span></code></pre>
+<p>Return the LMDB library version information. @param[out] major if non-NULL, the library major version number is copied here @param[out] minor if non-NULL, the library minor version number is copied here @param[out] patch if non-NULL, the library patch version number is copied here @retval "version string" The library version as a string</p>
+
+</section>
+
+		<section id="MDB_cmp_func" class="doc-node">
+			<div class="title"><h2>type MDB_cmp_func <a href="#MDB_cmp_func">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> MDB_cmp_func <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>const_a <span class="token operator">&</span>Mdb_val<span class="token punctuation">,</span> const_b <span class="token operator">&</span>Mdb_val<span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>A callback function used to compare two keys in a database</p>
+
+</section>
+
+		<section id="MDB_msg_func" class="doc-node">
+			<div class="title"><h2>type MDB_msg_func <a href="#MDB_msg_func">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> MDB_msg_func <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>const_msg <span class="token operator">&</span><span class="token builtin">char</span><span class="token punctuation">,</span> ctx <span class="token builtin">voidptr</span><span class="token punctuation">)</span> <span class="token builtin">int</span></code></pre>
+<p>A callback function used to print a message from the library. @param[in] msg The string to be printed. @param[in] ctx An arbitrary context pointer for the callback. @return &lt; 0 on failure, &gt;= 0 on success.</p>
+
+</section>
+
+		<section id="MDB_rel_func" class="doc-node">
+			<div class="title"><h2>type MDB_rel_func <a href="#MDB_rel_func">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> MDB_rel_func <span class="token operator">=</span> <span class="token keyword">fn</span> <span class="token punctuation">(</span>item <span class="token operator">&</span>Mdb_val<span class="token punctuation">,</span> oldptr <span class="token builtin">voidptr</span><span class="token punctuation">,</span> newptr <span class="token builtin">voidptr</span><span class="token punctuation">,</span> relctx <span class="token builtin">voidptr</span><span class="token punctuation">)</span></code></pre>
+<p>A callback function used to relocate a position-dependent data item in a fixed-address database.* The \b newptr gives the item's desired address inthe memory map, and \b oldptr gives its previous address. The item's actual* data resides at the address in \b item.  This callback is expected to walk*through the fields of the record in \b item and modify any *values based at the \b oldptr address to be relative to the \b newptr address. *@param[in,out] item The item that is to be relocated. *@param[in] oldptr The previous address. *@param[in] newptr The new address to relocate to. *@param[in] relctx An application-provided context, set by <code>#mdb_set_relctx()</code>. *@todo This feature is currently unimplemented.</p>
+
+</section>
+
+		<section id="Mdb_cursor" class="doc-node">
+			<div class="title"><h2>type Mdb_cursor <a href="#Mdb_cursor">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> Mdb_cursor <span class="token operator">=</span> C<span class="token punctuation">.</span>MDB_cursor</code></pre>
+<p>Opaque structure for navigating through a database</p>
+
+</section>
+
+		<section id="Mdb_dbi" class="doc-node">
+			<div class="title"><h2>type Mdb_dbi <a href="#Mdb_dbi">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> Mdb_dbi <span class="token operator">=</span> <span class="token builtin">u32</span></code></pre>
+<p>A handle for an individual database in the DB environment.</p>
+
+</section>
+
+		<section id="Mdb_env" class="doc-node">
+			<div class="title"><h2>type Mdb_env <a href="#Mdb_env">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> Mdb_env <span class="token operator">=</span> C<span class="token punctuation">.</span>MDB_env</code></pre>
+<p>Opaque structure for a database environment. A DB environment supports multiple databases, all residing in the same shared-memory map.</p>
+
+</section>
+
+		<section id="Mdb_envinfo" class="doc-node">
+			<div class="title"><h2>type Mdb_envinfo <a href="#Mdb_envinfo">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> Mdb_envinfo <span class="token operator">=</span> C<span class="token punctuation">.</span>MDB_envinfo</code></pre>
+<p>Information about the environment</p>
+
+</section>
+
+		<section id="Mdb_filehandle_t" class="doc-node">
+			<div class="title"><h2>type Mdb_filehandle_t <a href="#Mdb_filehandle_t">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> Mdb_filehandle_t <span class="token operator">=</span> <span class="token builtin">int</span></code></pre>
+<ul><li>Prevent mixing with non-VL32 builds*An abstraction for a file handle. *On POSIX systems file handles are small integers. On Windows *they're opaque pointers.</li></ul>
+
+</section>
+
+		<section id="Mdb_mode_t" class="doc-node">
+			<div class="title"><h2>type Mdb_mode_t <a href="#Mdb_mode_t">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> Mdb_mode_t <span class="token operator">=</span> C<span class="token punctuation">.</span>mdb_mode_t</code></pre>
+<p>*Unix permissions for creating files, or dummy definition for Windows</p>
+
+</section>
+
+		<section id="Mdb_size_t" class="doc-node">
+			<div class="title"><h2>type Mdb_size_t <a href="#Mdb_size_t">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> Mdb_size_t <span class="token operator">=</span> <span class="token builtin">usize</span></code></pre>
+<ul><li>Unsigned type used for mapsize, entry counts and page/transaction IDs.</li><li>It is normally size_t, hence the name. Defining MDB_VL32 makes it</li><li>uint64_t, but do not try this unless you know what you are doing.</li></ul>
+
+</section>
+
+		<section id="Mdb_stat" class="doc-node">
+			<div class="title"><h2>type Mdb_stat <a href="#Mdb_stat">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> Mdb_stat <span class="token operator">=</span> C<span class="token punctuation">.</span>MDB_stat</code></pre>
+<p>Statistics for a database in the environment</p>
+
+</section>
+
+		<section id="Mdb_txn" class="doc-node">
+			<div class="title"><h2>type Mdb_txn <a href="#Mdb_txn">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> Mdb_txn <span class="token operator">=</span> C<span class="token punctuation">.</span>MDB_txn</code></pre>
+<p>Opaque structure for a transaction handle.</p><p>All database operations require a transaction handle. Transactions may be read-only or read-write.</p>
+
+</section>
+
+		<section id="Mdb_val" class="doc-node">
+			<div class="title"><h2>type Mdb_val <a href="#Mdb_val">#</a></h2></div>
+<pre class="signature">
+<code><span class="token keyword">type</span> Mdb_val <span class="token operator">=</span> C<span class="token punctuation">.</span>MDB_val</code></pre>
+<p>Opaque structure for navigating through a database Generic structure used for passing keys and data in and out of the database. Values returned from the database are valid only until a subsequent update operation, or the end of the transaction. Do not modify or free them, they commonly point into the database itself. Key sizes must be between 1 and <code>#mdb_env_get_maxkeysize()</code> inclusive. The same applies to data sizes in databases with the #MDB_DUPSORT flag. Other data items can in theory be from 0 to 0xffffffff bytes long.</p>
+
+</section>
+
+		<section id="Mdb_cursor_op" class="doc-node">
+			<div class="title"><h2>enum Mdb_cursor_op <a href="#Mdb_cursor_op">#</a></h2></div>
+<div class="attributes"><div class="attribute">@[flags]</div></div>
+<pre class="signature">
+<code><span class="token keyword">enum</span> <span class="token symbol">Mdb_cursor_op</span> <span class="token punctuation">{</span>
+	<span class="token comment">//* Position at first key/data item</span>
+	mdb_first
+	<span class="token comment">//* Position at first data item of current key.</span>
+	<span class="token comment">// Only for #MDB_DUPSORT</span>
+	mdb_first_dup
+	<span class="token comment">//* Position at key/data pair. Only for #MDB_DUPSORT</span>
+	mdb_get_both
+	<span class="token comment">//* position at key, nearest data. Only for #MDB_DUPSORT</span>
+	mdb_get_both_range
+	<span class="token comment">//* Return key/data at current cursor position</span>
+	mdb_get_current
+	<span class="token comment">//* Return up to a page of duplicate data items</span>
+	<span class="token comment">//								from current cursor position. Move cursor to prepare</span>
+	<span class="token comment">//								for #MDB_NEXT_MULTIPLE. Only for #MDB_DUPFIXED</span>
+	mdb_get_multiple
+	<span class="token comment">//* Position at last key/data item</span>
+	mdb_last
+	<span class="token comment">//* Position at last data item of current key.</span>
+	<span class="token comment">//								Only for #MDB_DUPSORT</span>
+	mdb_last_dup
+	<span class="token comment">//* Position at next data item</span>
+	mdb_next
+	<span class="token comment">//* Position at next data item of current key.</span>
+	<span class="token comment">//								Only for #MDB_DUPSORT</span>
+	mdb_next_dup
+	<span class="token comment">//* Return up to a page of duplicate data items</span>
+	<span class="token comment">//								from next cursor position. Move cursor to prepare</span>
+	<span class="token comment">//								for #MDB_NEXT_MULTIPLE. Only for #MDB_DUPFIXED</span>
+	mdb_next_multiple
+	<span class="token comment">//* Position at first data item of next key</span>
+	mdb_next_nodup
+	<span class="token comment">//* Position at previous data item</span>
+	mdb_prev
+	<span class="token comment">//* Position at previous data item of current key.</span>
+	<span class="token comment">//								Only for #MDB_DUPSORT</span>
+	mdb_prev_dup
+	<span class="token comment">//* Position at last data item of previous key</span>
+	mdb_prev_nodup
+	<span class="token comment">//* Position at specified key</span>
+	mdb_set
+	<span class="token comment">//* Position at specified key, return key + data</span>
+	mdb_set_key
+	<span class="token comment">//* Position at first key greater than or equal to specified key.</span>
+	mdb_set_range
+	<span class="token comment">// Position at previous page and return up to</span>
+	<span class="token comment">// a page of duplicate data items. Only for #MDB_DUPFIXED</span>
+	mdb_prev_multiple
+<span class="token punctuation">}</span></code></pre>
+<p>Cursor Get operations. This is the set of all operations for retrieving data using a cursor.</p>
+
+</section>
+
+
+						<div class="footer">Powered by vdoc. Generated on: 16 Oct 2024 15:41:57</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js"></script>
+	</body>
+</html>
