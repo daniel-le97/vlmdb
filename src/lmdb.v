@@ -138,7 +138,13 @@ module vlmdb
 //
 
 @[typedef]
-struct C.MDB_val {}
+struct C.MDB_val {
+pub mut:
+	//* size of the data item
+	mv_size usize
+	//* address of the data item
+	mv_data voidptr
+}
 
 @[typedef]
 struct C.MDB_txn {}
@@ -155,8 +161,8 @@ struct C.MDB_stat {}
 @[typedef]
 struct C.MDB_cursor {}
 
-@[typedef]
-struct C.mdb_mode_t {}
+// @[typedef]
+// struct C.mdb_mode_t {}
 
 // Opaque structure for navigating through a database
 // Generic structure used for passing keys and data in and out
@@ -192,7 +198,7 @@ pub type Mdb_stat = C.MDB_stat
 pub type Mdb_cursor = C.MDB_cursor
 
 //*Unix permissions for creating files, or dummy definition for Windows
-pub type Mdb_mode_t = C.mdb_mode_t
+pub type Mdb_mode_t = u16
 
 
 //* Unsigned type used for mapsize, entry counts and page/transaction IDs.

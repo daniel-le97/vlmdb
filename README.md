@@ -1,11 +1,10 @@
 # vlmdb
 
-## A v wrapper for lmdb
+`vlmdb` is a V wrapper for LMDB.
 
-lmdb api is complete but not struct field definitions
 
-## note
-this is still a low level wrapper, i may eventually make a high level wrapper submodule
+## License
 
-## todo
- - add examples
+`vlmdb` is licensed under the MIT License. See the `LICENSE` file for details.
+
+The LMDB code included in the `./thirdparty` directory is licensed under the OpenLDAP Public License. See the `thirdparty/LICENSE` file for details.
